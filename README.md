@@ -1,2 +1,0 @@
-# jojo
-Aniversário da Jojô
