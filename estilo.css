@@ -1,0 +1,396 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cabecalho{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-color: #e0b0f6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px dashed white;
+}
+
+.logo{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.menus{
+    font-size: 30px;
+}
+
+.menus a i{
+    color: white;
+}
+
+
+/* SEÇÃO DO HERO IMAGE */
+
+.hero{
+    background-image: url(banner.png);
+    
+    /* background-size: possibilita o ajuste das imagens do background, ao invés do comportamento padrão do navegador de mostrar a imagem no seu tamanho real. 
+
+    conver: A imagem cobre o container inteiro, com a propriedade cover, sem perder qualidade. Porém, a imagem e o container tem que ter o mesmo tamanho. */
+    background-size: cover;
+    
+    /* Altura mínima da tela */
+    min-height: 100vh;
+    
+    /* Cor branca para o texto do hero */
+    color: black;
+    
+    /* Deixando o hero flex */
+    display: flex;
+    
+    /* Direção dos itens - Colunas ou linhas*/
+    flex-direction: column;
+    
+    /* Alinhamento vertical dos itens dentro do flex - em cima, no meio ou embaixo*/
+    justify-content: center;
+    
+    /* Alinhamento horizontal dos itens dentro do flex - em cima, no meio ou embaixo*/
+    align-items: center; 
+    
+    /* Alinhamento do Texto */
+    text-align: center;
+}
+
+/* Configurações de breakpoint para o hero */
+
+@media (max-width: 700px){
+    .hero h1{
+        font-size: 2.5rem;
+    }
+    .hero h3{
+        font-size: 1.5rem;
+    }
+}
+
+/*CONFIGURAÇÃO SECTION GIF*/
+.gif{
+    background-color: #e0b0f6;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
+}
+
+.gif h2{
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+
+.gifs{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gifs img{
+    width: 45%;
+    border-radius: 60%;
+    padding: 10px;
+    border: 4px dashed white;
+    margin-bottom: 15px;
+}
+
+.gif p{
+    width: 45%;
+    color: white;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px){
+    .gifs{
+        flex-direction: column;
+    }
+}
+/*FIM SECTION GIF*/
+
+/*CONFIGURAÇÃO SECTION INFORMAÇÕES*/
+
+.informacoes{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 15px;
+    
+    /*background-color: #e0b0f6;*/
+}
+
+.informacoes h2{
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #8c1ec6;
+}
+
+.informacoes hr{
+    width: 60%;
+    border: 1.5px solid #8c1ec6;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.informacao{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 15px;
+}
+
+.info{
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.info img{
+    width: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.info p{
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #8c1ec6;
+}
+
+.fade
+{
+        opacity:1;
+}
+.fade:hover
+{
+        opacity:0.2;
+}
+
+@media (max-width: 700px){
+    .informacoes{
+        height: 100%;
+    }
+    
+    .informacao{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    
+    .info{
+        height: 100%;
+    }
+}
+
+/*CONFIGURAÇÃO SECTION LOCAL*/
+
+.fotoslocal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0b0f6;
+}
+
+.fotoslocal h2{
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.fotoslocal hr{
+    width: 60%;
+    border: 1.5px solid white;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.fotoslocal p{
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.fotoslocal .grid{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fotoslocal .grid li{
+    height: 350px;
+    padding: 20px;
+    border-radius: 4px;
+    /*background-clip - Propriedade que permite controlar onde o BG começa a ser desenhado */
+    background-clip: content-box;
+    /*background-size - Tamanho do BG que vai ser do tamanho do elemento */
+    background-size: cover;
+    /*background-position - posicionamento do BG sempre ao centro do elemento  */
+    background-position: center;
+}
+
+.fotoslocal .grid li.small{
+    /* Tamanho da grid small 40% da grid */
+    flex-basis: 40%;
+    border: 4px dashed white;
+}
+
+.fotoslocal .grid li.large{
+    /* Tamanho da grid large 60% da grid */
+    flex-basis: 60%;
+    border: 4px dashed white;
+}
+
+/* Media Query para a seção */
+@media (max-width: 700px){
+    .fotoslocal .grid li.small, .fotoslocal .grid li.large{
+        flex-basis: 100%;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+}
+
+/*CONFIGURAÇÃO SECTION CONTATO*/
+.contatos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+.contatos h2{
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contato{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.contatos h2{
+    color: #8c1ec6;
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contatinho{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.contatinho img{
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px dashed #8c1ec6;
+}
+
+.contatinho h3{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #8c1ec6;
+}
+
+.contatinho hr{
+    width: 60%;
+    border: 1.5px solid #8c1ec6;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+.contatinho p{
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #8c1ec6;
+}
+
+@media (max-width: 700px){
+    .contato{
+        flex-direction: column;
+    }
+}
+
+/*INÍCIO DO FOOTER*/
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #e0b0f6;
+    color: white;
+    font-weight: 700;
+}
+
+footer img{
+    width: 60px;
+}
